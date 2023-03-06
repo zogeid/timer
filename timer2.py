@@ -8,13 +8,13 @@ root = Tk()
 
 # setting geometry of tk window
 root.geometry("300x250")
-
+mins = "04"
 hour = StringVar()
 minute = StringVar()
 second = StringVar()
 
 hour.set("00")
-minute.set("03")
+minute.set(mins)
 second.set("00")
 
 # Use of Entry class to take input from the user
@@ -79,7 +79,7 @@ def submit(ptemp):
 
         if temp == 0:
             winsound.Beep(2500, 1000)
-            minute.set("03")
+            minute.set(mins)
 
         # after every one sec the value of temp will be decremented by one
         temp -= 1

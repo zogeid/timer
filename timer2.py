@@ -8,13 +8,13 @@ root = Tk()
 
 # setting geometry of tk window
 root.geometry("300x250")
-mins = "04"
+globMins = "04"
 hour = StringVar()
 minute = StringVar()
 second = StringVar()
 
 hour.set("00")
-minute.set(mins)
+minute.set(globMins)
 second.set("00")
 
 # Use of Entry class to take input from the user
@@ -34,22 +34,20 @@ secondEntry.place(x=180, y=20)
 
 
 def reset():
-    submit(180)
+    submit("04") #homogeneizar con globnalmins
 
 
 def start():
     submit(0)
 
 
-def submit(ptemp):
+def submit(input_temp):
     temp = 0
-
+    ptemp = 60*int(input_temp)
     try:
         # the input
         if ptemp == 0:
             temp = int(hour.get()) * 3600 + int(minute.get()) * 60 + int(second.get())
-
-        # bindings()
 
     except Exception as excep:
         print(type(excep))  # the exception instance
@@ -58,8 +56,6 @@ def submit(ptemp):
         print("Please input the right value")
 
     while temp > -1:
-
-        # divmod(firstvalue = temp//60, secondvalue = temp%60)
         mins, secs = divmod(temp, 60)
 
         # Converting the input entered in mins or secs to hours, mins ,secs

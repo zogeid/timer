@@ -27,11 +27,6 @@ minuteEntry.place(x=130, y=20)
 secondEntry = Entry(root, width=3, font=("Arial", 18, ""), textvariable=second)
 secondEntry.place(x=180, y=20)
 
-# def bindings(self):
-#     self.master.bind('a', lambda event: print("A was pressed"))
-#     self.master.bind('<Space>', lambda event: submit())
-#     self.frame.bind('<Enter>', lambda event: print("Entered Frame"))
-
 
 def reset():
     submit("04") #homogeneizar con globnalmins
@@ -39,6 +34,7 @@ def reset():
 
 def start():
     submit(0)
+    minute.set(globMins)
 
 
 def submit(input_temp):
@@ -75,7 +71,7 @@ def submit(input_temp):
 
         if temp == 0:
             winsound.Beep(2500, 1000)
-            minute.set(mins)
+
 
         # after every one sec the value of temp will be decremented by one
         temp -= 1

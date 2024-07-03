@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../medicionesSensor/.idea/medicionesSensor.iml" filepath="$PROJECT_DIR$/../medicionesSensor/.idea/medicionesSensor.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/timer.iml" filepath="$PROJECT_DIR$/.idea/timer.iml" />
     </modules>
   </component>
